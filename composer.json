@@ -1,0 +1,31 @@
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../php-profiler"
+        }
+    ],
+    "name": "mmo/php-profiler-cli",
+    "require": {
+        "php": ">=7.2 || ^8.0",
+        "ext-json": "*",
+        "composer-runtime-api": "^2.0",
+        "mmo/php-profiler": "*@dev",
+        "symfony/config": "^5.4",
+        "symfony/console": "^5.4",
+        "symfony/dependency-injection": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mmo\\PhpProfilerCli\\": "src/"
+        }
+    },
+    "bin": [
+        "parse-profiler-data",
+        "create-flame-graph",
+        "php-profiler-cli"
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    }
+}
